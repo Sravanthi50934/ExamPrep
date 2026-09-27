@@ -14,8 +14,8 @@ const memStore = {
 };
 
 // Seed demo data for instant out-of-the-box exploration
-const initDemoData = async () => {
-  const hashedPassword = await bcrypt.hash('password123', 10);
+const initDemoData = () => {
+  const hashedPassword = bcrypt.hashSync('password123', 10);
   const demoUserId = 'demo-user-id-001';
 
   memStore.users.push({
