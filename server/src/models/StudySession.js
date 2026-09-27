@@ -48,4 +48,4 @@ const studySessionSchema = new mongoose.Schema(
   }
 );
 
-export const StudySession = mongoose.model('StudySession', studySessionSchema);
+export const StudySession = mongoose.models.StudySession || mongoose.model('StudySession', studySessionSchema);

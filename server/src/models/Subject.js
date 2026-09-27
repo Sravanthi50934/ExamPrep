@@ -97,4 +97,4 @@ subjectSchema.virtual('completionRate').get(function () {
 subjectSchema.set('toJSON', { virtuals: true });
 subjectSchema.set('toObject', { virtuals: true });
 
-export const Subject = mongoose.model('Subject', subjectSchema);
+export const Subject = mongoose.models.Subject || mongoose.model('Subject', subjectSchema);

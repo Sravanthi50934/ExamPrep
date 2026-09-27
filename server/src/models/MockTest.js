@@ -64,4 +64,4 @@ mockTestSchema.pre('save', function (next) {
   next();
 });
 
-export const MockTest = mongoose.model('MockTest', mockTestSchema);
+export const MockTest = mongoose.models.MockTest || mongoose.model('MockTest', mockTestSchema);
